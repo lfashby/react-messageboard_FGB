@@ -9,14 +9,21 @@ class App extends Component {
 
     this.state = {
       posts: [
-        'Hello World!'
+        'Hello World!!'
       ],
     }
   }
   render() {
     return (
       <div>
-        <Post />
+      {
+        this.state.posts.map((postBody, idx) => {
+          return (
+            <Post key={idx} postBody={postBody} />
+          )
+        })
+      }
+
         <Panel className="post-submit-module">
           <form>
             <FormGroup>

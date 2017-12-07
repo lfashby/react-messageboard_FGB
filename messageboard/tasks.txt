@@ -29,3 +29,5 @@ extra----
 [] Add client side form validation & error handling
 [] Unit tests to your code
 [] Style/flair of your own as long as it keep true to the ideas presented in the wireframes
+--
+[] PropTypes
