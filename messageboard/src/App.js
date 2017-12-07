@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
+import Post from './components/Post.jsx'
 import { Panel, Button, FormGroup, FormControl } from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      posts: [
+        'Hello World!'
+      ],
+    }
+  }
   render() {
     return (
       <div>
-        <Panel className="posts">This is a post</Panel>
+        <Post />
         <Panel className="post-submit-module">
           <form>
             <FormGroup>

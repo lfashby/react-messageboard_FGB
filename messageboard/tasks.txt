@@ -1,0 +1,31 @@
+todos:
+
+[] Landing page
+  [] page title
+  [] empty state
+  [] 'create new post' button
+  [] subsequent submitted posts
+[] Create Post Page
+  [] inputs: message title, message body, username
+  [] buttons: 'cancel', 'create post'
+[] Post detail page
+  [] title
+  [] username
+  [] date & time
+  [] message body
+  [] button: 'back to posts' -> return to landing page
+    [] Responses
+      [] username
+      [] message body
+    [] Reply module
+      [] inputs: message body, username
+      [] buttons: 'cancel', 'post reply'
+
+components----
+[] post list
+[] posts list item
+
+extra----
+[] Add client side form validation & error handling
+[] Unit tests to your code
+[] Style/flair of your own as long as it keep true to the ideas presented in the wireframes
