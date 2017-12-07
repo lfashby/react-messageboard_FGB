@@ -1,4 +1,13 @@
-.jumbo {
+.post-submit-module {
+  margin: 1em 25%;
+}
+
+.message-post-button {
+  float: right;
+  margin-top: 1em;
+}
+
+.posts {
   margin: 1em 25%;
 }
 
