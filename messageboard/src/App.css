@@ -1,0 +1,9 @@
+.jumbo {
+  margin: 1em 25%;
+}
+
+@media(max-width: 900px) {
+  .jumbo {
+    margin: 1em 0;
+  }
+}
