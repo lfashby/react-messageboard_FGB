@@ -7,12 +7,28 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.postMessage = this.postMessage.bind(this);
+    this.handlePostInputChange = this.handlePostInputChange.bind(this);
+
     this.state = {
-      posts: [
-        'Hello World!!'
-      ],
+      posts: [],
+      newPostBody: '',
     }
   }
+
+  postMessage() {
+    const newState = Object.assign({}, this.state);
+    newState.posts.push(this.state.newPostBody);
+    newState.newPostBody = '';
+    this.setState(newState);
+  }
+
+  handlePostInputChange(e) {
+    this.setState({
+      newPostBody: e.target.value
+    })
+  }
+
   render() {
     return (
       <div>
@@ -27,8 +43,8 @@ class App extends Component {
         <Panel className="post-submit-module">
           <form>
             <FormGroup>
-              <FormControl type="text" placeholder="Add your message" />
-              <Button bsStyle="primary" className="message-post-button">Post</Button>
+              <FormControl className="post-input" type="text" placeholder="Add your message" onChange={this.handlePostInputChange} />
+              <Button bsStyle="primary" className="message-post-button" onClick={this.postMessage}>Post</Button>
             </FormGroup>
           </form>
         </Panel>
