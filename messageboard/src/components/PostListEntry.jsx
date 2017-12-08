@@ -1,8 +1,8 @@
 import React from 'react';
 import { Panel } from 'react-bootstrap';
 
-const Post = (props) => (
+const PostListEntry = (props) => (
   <Panel className="posts">{ props.postBody }</Panel>
 )
 
-export default Post;
+export default PostListEntry;
