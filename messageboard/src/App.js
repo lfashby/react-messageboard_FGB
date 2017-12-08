@@ -10,12 +10,14 @@ class App extends Component {
     this.postMessage = this.postMessage.bind(this);
     this.handlePostInputChange = this.handlePostInputChange.bind(this);
 
+    // uses separate postBody prop to capture message text -> pushed into posts collection
     this.state = {
       posts: [],
       newPostBody: '',
     }
   }
 
+  // makes a copy of state obj -> pushes message to collection -> clears input field -> sets state to new copied state obj
   postMessage() {
     const newState = Object.assign({}, this.state);
     newState.posts.push(this.state.newPostBody);
@@ -43,7 +45,7 @@ class App extends Component {
         <Panel className="post-submit-module">
           <form>
             <FormGroup>
-              <FormControl className="post-input" type="text" placeholder="Add your message" onChange={this.handlePostInputChange} />
+              <FormControl className="post-input" type="text" placeholder="Add your message" onChange={this.handlePostInputChange} value={this.state.newPostBody} />
               <Button bsStyle="primary" className="message-post-button" onClick={this.postMessage}>Post</Button>
             </FormGroup>
           </form>
