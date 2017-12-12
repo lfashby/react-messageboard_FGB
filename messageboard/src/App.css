@@ -1,8 +1,17 @@
+.submit-post-title {
+  text-align: center;
+}
+
 .post-submit-module {
   margin: 1em 25%;
 }
 
 .message-post-button {
+  float: right;
+  margin-top: 1em;
+}
+
+.cancel-post-button {
   float: right;
   margin-top: 1em;
 }
